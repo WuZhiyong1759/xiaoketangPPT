@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)file:///F:/jnshuView/democlass/demoPPT.html#/20 -->
+<html class=" no-mobile desktop no-ie chrome chrome57 f:-section jnshuview-section democlass-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface js no-mobile desktop no-ie chrome chrome57 f:-section jnshuview-section democlass-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded w-1366 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 lt-1440 lt-1680 lt-1920 no-portrait landscape" id="demoppt-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./myPPT_files/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./myPPT_files/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./myPPT_files/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script><link rel="stylesheet" type="text/css" href="file:///F:/jnshuView/css/reveal/print/paper.css"><link rel="stylesheet" type="text/css" href="file:///F:/jnshuView/css/reveal/print/paper.css"><script type="text/javascript" src="./myPPT_files/marked.js.下载"></script><script type="text/javascript" src="./myPPT_files/markdown.js.下载"></script><script type="text/javascript" src="./myPPT_files/notes.js.下载"></script><script type="text/javascript" src="./myPPT_files/highlight.js.下载"></script><script type="text/javascript" src="./myPPT_files/marked.js(1).下载"></script><script type="text/javascript" src="./myPPT_files/markdown.js(1).下载"></script><script type="text/javascript" src="./myPPT_files/notes.js(1).下载"></script><script type="text/javascript" src="./myPPT_files/highlight.js(1).下载"></script>
+</head>
+<body>
+<img src="./myPPT_files/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com/" alt="" target="_blank">
+</map>
+<div class="reveal center slide" role="application" data-transition-speed="default" data-background-transition="fade">
+    <div class="slides" style="height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.488571); width: 960px;">
+        <section class="past" style="top: 145.5px; display: none;" hidden="" aria-hidden="true">
+            <h2>mysql中的varchar类型</h2>
+            <h3>BD设计中字段“修真类型”该存储什么类型？</h3>
+            <p>分享人：吴志勇</p>
+        </section>
+        <section class="past" style="top: 36px; display: none;" hidden="" aria-hidden="true">
+            <p>1.背景介绍</p>
+            <p>2.知识剖析</p>
+            <p>3.常见问题</p>
+            <p>4.解决方案</p>
+            <p>5.编码实战</p>
+            <p>6.扩展思考</p>
+            <p>7.参考文献</p>
+            <p>8.更多讨论</p>
+        </section>
+        <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+            <h3>1.背景介绍</h3>
+        </section>
+        <section class="past" style="top: 28px; display: none;" hidden="" aria-hidden="true">
+        	<img src="./myPPT_files/dbmodel.png">
+            <p>在修真院的Java任务1中，学员需要根据线下报名贴设计报名表，设计表时，我们发现表中有一个“修真类型”的字段，在数据库中我们对这个字段该怎么存储。</p>
+        </section>
+        <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+            <h3>2.知识剖析</h3>
+        </section>
+        <section class="past" style="top: 201px; display: none;" hidden="" aria-hidden="true">
+            <p>1、我们在描述“修真类型”的表述方式是什么？</p>
+            
+        <p>2、计算机中又是去怎么描述的？</p><p>3、计算机中是以什么类型存储的？</p></section>
+         <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+            <h3>3.常见问题</h3>
+        </section>
+        <section class="past" style="top: 234px; display: none;" hidden="" aria-hidden="true">
+            
+        <p>在数据库中对字符串（文本）的存储方式有哪些？</p><p>它们之间有什么区别？</p></section>
+        <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+            <h3>4.解决方案</h3>
+        </section>
+        <section class="past" style="top: 151.5px; display: none;" hidden="" aria-hidden="true">
+  			<img src="./myPPT_files/baidu.png">
+            
+            
+        
+            </section>
+        <section class="past" style="top: 11.5px; display: none;" hidden="" aria-hidden="true">
+            <img style="margin-top: -10px;" src="./myPPT_files/sjlx.png">
+  <p>字符串类型：char；varchar；text</p><p>int类型：BIGINT、MEDIUMINT、SMALLINT、TINYINT、INTEGER</p></section>
+        <section class="past" style="top: 201px; display: none;" hidden="" aria-hidden="true">           
+            <p>我们是该存储字符串还是int</p>            
+        <p>如果存储字符串：是char还是varchar，它们的长度怎么确定</p><p>text和longtext有什么区别</p></section>
+        <section class="past" style="top: 73px; display: none;" hidden="" aria-hidden="true">
+  <p>char和varchar的区别</p>
+            
+            <p>CHAR(M)定义的列的长度为固定的，M取值可以为0～255之间，
+VARCHAR(M)定义的列的长度为可变长字符串，M取值可以为0~65535之间，(VARCHAR的最大有效长度由最大行大小和使用 的字符集确定。整体最大长度是65,532字节）。
+CHAR和VARCHAR最大的不同就是一个是固定长度，一个是可变长度。由于是可变长度，因此实际存储的时候是实际字符串再加上一个记录 字符串长度的字节(如果超过255则需要两个字节)</p></section>
+
+            <section class="past" style="top: 168px; display: none;" hidden="" aria-hidden="true">
+            <p>TINYTEXT 最大长度是 255 (2^8 - 1) 个字符。</p>
+            
+            
+            <p>TEXT 最大长度是 65535 (2^16 - 1) 个字符</p><p>MEDIUMTEXT 最大长度是 16777215 (2^24 - 1) 个字符。</p><p>LONGTEXT 最大长度是 4294967295 (2^32 - 1) 个字符</p></section>
+        <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+            <h3>5.编码实战</h3>
+        </section>
+        <section class="past" style="top: 153px; display: none;" hidden="" aria-hidden="true">
+        
+
+            
+        <img src="./myPPT_files/show.png"></section>
+        <section class="past" style="top: 267px; display: none;" hidden="" aria-hidden="true">
+            <h3>6.扩展思考</h3>
+        </section>
+
+        <section class="past" style="top: 211px; display: none;" hidden="" aria-hidden="true">
+            <p>1.对于修真类型这种具有几种固定值的字段我们还可以用什么存储</p>
+            <p>2.MySQL中的ENUM是什么类型，在什么情况下使用它</p>
+        </section>
+        
+        <section class="past" style="top: 234px; display: block;" hidden="" aria-hidden="true">
+            <h3>7.参考文献</h3>
+            <p><a href="http://www.baidu.com/" target="_blank">http://www.baidu.com</a></p>
+            
+            
+        </section>
+        <section class="past" style="top: 234px; display: block;" hidden="" aria-hidden="true">
+            <h3>8.更多讨论</h3>
+            <p>在DB表中，其他的字段该用什么类型</p>
+        </section>
+        <section class="present" style="top: 245.5px; display: block;">
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            
+        </section>
+
+    </div>
+<div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: block;" data-loaded="true"></div><div class="slide-background past" style="display: block;" data-loaded="true"></div><div class="slide-background present" style="display: block;" data-loaded="true"></div></div><div class="progress" style="display: block;"><span style="width: 1366px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"></button><button class="navigate-right" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide"></button><button class="navigate-down" aria-label="below slide"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe=""></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+            鸣谢
+            感谢大家观看
+            BY : 陈红远|胡思豪
+        </div></div>
+
+<script src="./myPPT_files/head.min.js.下载"></script>
+<script src="./myPPT_files/reveal.js.下载"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+
+</body></html>
