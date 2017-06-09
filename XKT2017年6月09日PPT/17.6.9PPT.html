@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///F:/jnshuView/democlass/myPPT.html#/16 -->
+<html class=" no-mobile desktop no-ie chrome chrome58 f:-section jnshuview-section democlass-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface no-mobile desktop no-ie chrome chrome58 f:-section jnshuview-section democlass-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface js no-mobile desktop no-ie chrome chrome58 f:-section jnshuview-section democlass-section gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded w-576 gt-240 gt-320 gt-480 lt-640 lt-768 lt-800 lt-1024 lt-1280 lt-1440 lt-1680 lt-1920 portrait no-landscape" id="myppt-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>葡萄藤PPT</title>
+
+    <link rel="stylesheet" href="./17.6.9PPT_files/reveal.css">
+
+    <!-- PPT主题，可以在/css/reveal/theme/中选择其他主题，目前暂时只能使用该模板 -->
+    <link rel="stylesheet" href="./17.6.9PPT_files/ptt.css">
+
+    <!-- syntax highlighting 代码高亮主题 -->
+    <link rel="stylesheet" href="./17.6.9PPT_files/zenburn.css">
+
+    <!-- 打印和PDF输出样式 -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'https://ptteng.github.io/PPT/css/reveal/print/pdf.css' : '../css/reveal/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script><link rel="stylesheet" type="text/css" href="file:///F:/jnshuView/css/reveal/print/paper.css"><link rel="stylesheet" type="text/css" href="file:///F:/jnshuView/css/reveal/print/paper.css"><link rel="stylesheet" type="text/css" href="file:///F:/jnshuView/css/reveal/print/paper.css"><script type="text/javascript" src="./17.6.9PPT_files/marked.js.下载"></script><script type="text/javascript" src="./17.6.9PPT_files/markdown.js.下载"></script><script type="text/javascript" src="./17.6.9PPT_files/notes.js.下载"></script><script type="text/javascript" src="./17.6.9PPT_files/highlight.js.下载"></script><script type="text/javascript" src="./17.6.9PPT_files/marked.js(1).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/markdown.js(1).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/notes.js(1).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/highlight.js(1).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/marked.js(2).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/markdown.js(2).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/notes.js(2).下载"></script><script type="text/javascript" src="./17.6.9PPT_files/highlight.js(2).下载"></script>
+</head>
+<body>
+<img src="./17.6.9PPT_files/logo.png" alt="" usemap="#pttmap" class="base-logo">
+<map name="pttmap">
+    <area shape="rect" coords="0,0,276,58" href="http://www.jnshu.com/" alt="" target="_blank">
+</map>
+<div class="reveal center slide" role="application" data-transition-speed="default" data-background-transition="fade">
+    <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.54);">
+        <section class="past" style="top: 221.5px; display: none;" data-index-h="0" hidden="" aria-hidden="true">
+            <h2>maven中的module</h2>
+            
+            <p>分享人：吴志勇</p>
+        </section>
+        <section class="past" style="top: 36px; display: none;" data-index-h="1" hidden="" aria-hidden="true">
+            <p>1.背景介绍</p>
+            <p>2.知识剖析</p>
+            <p>3.常见问题</p>
+            <p>4.解决方案</p>
+            <p>5.编码实战</p>
+            <p>6.扩展思考</p>
+            <p>7.参考文献</p>
+            <p>8.更多讨论</p>
+        </section>
+        <section class="past" style="top: 267px; display: none;" data-index-h="2" hidden="" aria-hidden="true">
+            <h3>1.背景介绍</h3>
+        </section>
+        <section class="past" style="top: 50px; display: none;" data-index-h="3" hidden="" aria-hidden="true">
+        	
+            <p>modules
+
+　　从字面意思来说，module就是模块，而pom.xml中的modules也正是这个意思，用来管理同个项目中的各个模块；如果maven用的比较简单，或者说项目的模块在pom.xml没进行划分，那么此元素是用不到的；不过一般大一点的项目是要用到的</p>
+  <p>需求场景
+
+　　　　如果我们的项目分成了好几个模块，那么我们构建的时候是不是有几个模块就需要构建几次了（到每个模块的目录下执行mvn命令）？当然，你逐个构建没问题，但是非要这么麻烦的一个一个的构建吗，那么简单的做法就是使用聚合，一次构建全部模块。</p>
+        </section>
+        <section class="past" style="top: 267px; display: none;" data-index-h="4" hidden="" aria-hidden="true">
+            <h3>2.知识剖析</h3>
+        </section>
+        <section class="past" style="top: 168px; display: none;" data-index-h="5" hidden="" aria-hidden="true">
+  
+            <p>1.什么是聚合项目</p>
+  <p>2.如何创建一个聚合项目</p>
+<p>3.和普通项目相比有什么特点</p>
+<p>4.各个module之间的关系是怎么样的</p>
+
+
+
+
+
+
+
+            
+        </section>
+         <section class="past" style="top: 267px; display: none;" data-index-h="6" hidden="" aria-hidden="true">
+            <h3>3.常见问题</h3>
+        </section>
+        <section class="past" style="top: 267px; display: none;" data-index-h="7" hidden="" aria-hidden="true">
+  <p>聚合项目的pom文件怎么配置？</p>
+            
+
+        </section>
+        <section class="past" style="top: 267px; display: none;" data-index-h="8" hidden="" aria-hidden="true">
+            <h3>4.解决方案</h3>
+        </section>
+        
+        <section class="past" style="top: 10px; display: none;" data-index-h="10" hidden="" aria-hidden="true">
+            <h3>百度</h3>
+            
+            <img style="margin-top: -10px;" src="./17.6.9PPT_files/001.png">
+            
+        </section>
+        
+<section class="past" style="top: 61px; display: none;" data-index-h="11" hidden="" aria-hidden="true">
+            
+            <img src="./17.6.9PPT_files/002.png">
+            
+        </section>
+        
+            
+        <section class="past" style="top: 267px; display: none;" data-index-h="14" hidden="" aria-hidden="true">
+            <h3>5.编码实战</h3>
+        </section>
+        
+        <section class="past" style="top: 267px; display: none;" data-index-h="16" hidden="" aria-hidden="true">
+            <h3>6.扩展思考</h3>
+        </section>
+
+        <section class="past" style="top: 267px; display: none;" data-index-h="17" hidden="" aria-hidden="true">
+            
+            <p>什么是约定优于配置</p>
+        </section>
+        
+        <section class="past" style="top: 234px; display: block;" data-index-h="18" hidden="" aria-hidden="true">
+            <h3>7.参考文献</h3>
+            <p>参考一：<a href="file:///F:/jnshuView/democlass/www.baidu.com" target="_blank">www.baidu.com</a></p>
+            
+            
+        </section>
+        <section class="past" style="top: 234px; display: block;" data-index-h="19" hidden="" aria-hidden="true">
+            <h3>8.更多讨论</h3>
+            <p>聚合项目的反应堆及其裁剪</p>
+        </section>
+        <section class="present" style="top: 245.5px; display: block;" data-index-h="20">
+            <h4>鸣谢</h4>
+            <p>感谢大家观看</p>
+            
+        </section>
+
+    </div>
+<div class="progress" style="display: block;"><span style="width: 576px;"></span></div><aside class="controls" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"></button><button class="navigate-right" aria-label="next slide"></button><button class="navigate-up" aria-label="above slide"></button><button class="navigate-down" aria-label="below slide"></button></aside><div class="slide-number" style="display: none;"></div><div class="speaker-notes" data-prevent-swipe=""></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px);">
+            鸣谢
+            感谢大家观看
+            
+        </div><div class="backgrounds"><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" data-loaded="true" style="display: none;"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: none;" data-loaded="true"></div><div class="slide-background past" style="display: block;" data-loaded="true"></div><div class="slide-background past" style="display: block;" data-loaded="true"></div><div class="slide-background present" style="display: block;" data-loaded="true"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div></div>
+
+<script src="./17.6.9PPT_files/head.min.js.下载"></script>
+<script src="./17.6.9PPT_files/reveal.js.下载"></script>
+
+<script>
+
+    // 以下为常见配置属性的默认值
+    // {
+    // 	controls: true, // 是否在右下角展示控制条
+    // 	progress: true, // 是否显示演示的进度条
+    // 	slideNumber: false, // 是否显示当前幻灯片的页数编号，也可以使用代码slideNumber: 'c / t' ，表示当前页/总页数。
+    // 	history: false, // 是否将每个幻灯片改变加入到浏览器的历史记录中去
+    // 	keyboard: true, // 是否启用键盘快捷键来导航
+    // 	overview: true, // 是否启用幻灯片的概览模式，可使用"Esc"或"o"键来切换概览模式
+    // 	center: true, // 是否将幻灯片垂直居中
+    // 	touch: true, // 是否在触屏设备上启用触摸滑动切换
+    // 	loop: false, // 是否循环演示
+    // 	rtl: false, // 是否将演示的方向变成RTL，即从右往左
+    // 	fragments: true, // 全局开启和关闭碎片。
+    // 	autoSlide: 0, // 两个幻灯片之间自动切换的时间间隔（毫秒），当设置成 0 的时候则禁止自动切换，该值可以被幻灯片上的 ` data-autoslide` 属性覆盖
+    // 	transition: 'default', // 切换过渡效果，有none/fade/slide/convex/concave/zoom
+    // 	transitionSpeed: 'default', // 过渡速度，default/fast/slow
+    // 	mouseWheel: true, //是否启用通过鼠标滚轮来切换幻灯片
+    // }
+
+    // 初始化幻灯片
+    Reveal.initialize({
+        history: true,
+        dependencies: [
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/marked.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/markdown/markdown.js' },
+            { src: 'https://ptteng.github.io/PPT/plugin/notes/notes.js', async: true },
+            { src: 'https://ptteng.github.io/PPT/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+
+</body></html>
